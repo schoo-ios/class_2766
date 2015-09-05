@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A61DE0581B9A2194003B93A2 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61DE0571B9A2194003B93A2 /* ProfileEditViewController.swift */; };
+		A61DE05E1B9A8C77003B93A2 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61DE05D1B9A8C77003B93A2 /* ProfileEditViewController.swift */; };
 		A6209B5B1B94C77D000A22A5 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6209B591B94C77D000A22A5 /* TweetDetailViewController.swift */; };
 		A64096691B8D0E4A001D6E0A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64096681B8D0E4A001D6E0A /* Accounts.framework */; };
 		A640966B1B8D0E51001D6E0A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A640966A1B8D0E51001D6E0A /* Social.framework */; };
@@ -32,7 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A61DE0571B9A2194003B93A2 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileEditViewController.swift; path = ../../../../bitbucket.org/h_nagami/swift_ios_03_timeline_sample/twitter_sample/ProfileEditViewController.swift; sourceTree = "<group>"; };
+		A61DE05D1B9A8C77003B93A2 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		A6209B591B94C77D000A22A5 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		A64096681B8D0E4A001D6E0A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A640966A1B8D0E51001D6E0A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -93,7 +93,7 @@
 		F9BB55351B80AC0D008D3323 /* twitter_sample */ = {
 			isa = PBXGroup;
 			children = (
-				A61DE0571B9A2194003B93A2 /* ProfileEditViewController.swift */,
+				A61DE05D1B9A8C77003B93A2 /* ProfileEditViewController.swift */,
 				A6209B591B94C77D000A22A5 /* TweetDetailViewController.swift */,
 				F90107BE1B87007600BB6E11 /* TimelineViewController.swift */,
 				A64096701B921EE3001D6E0A /* TweetPostViewController.swift */,
@@ -236,7 +236,7 @@
 				F9BB55391B80AC0D008D3323 /* AppDelegate.swift in Sources */,
 				F90107BF1B87007600BB6E11 /* TimelineViewController.swift in Sources */,
 				A64096711B921EE3001D6E0A /* TweetPostViewController.swift in Sources */,
-				A61DE0581B9A2194003B93A2 /* ProfileEditViewController.swift in Sources */,
+				A61DE05E1B9A8C77003B93A2 /* ProfileEditViewController.swift in Sources */,
 				A6209B5B1B94C77D000A22A5 /* TweetDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
