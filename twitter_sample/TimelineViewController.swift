@@ -19,14 +19,9 @@ class TimelineViewController: UITableViewController, UITableViewDelegate, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Timeline"
-        self.refresh(self.refreshControl!)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        if refreshControl!.refreshing {
-            refreshControl!.beginRefreshing()
-        }
+        navigationItem.title = "Timeline"
+        tableView.contentOffset.y = -self.refreshControl!.frame.size.height
+        refresh(self.refreshControl!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,13 +70,13 @@ class TimelineViewController: UITableViewController, UITableViewDelegate, UITabl
     
     //  Twitter APIを使ってタイムラインを取得しtweetsに保存する
     func fetchTimeline() {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         let URL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
         
         let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: URL, parameters: nil)
         request.account = twAccount
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        refreshControl!.beginRefreshing()
         
         request.performRequestWithHandler { (data, response, error:NSError?) -> Void in
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
@@ -134,6 +129,11 @@ class TimelineViewController: UITableViewController, UITableViewDelegate, UITabl
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTweetPostViewController" {
             var vc = segue.destinationViewController as! TweetPostViewController
+            vc.twAccount = self.twAccount
+        }
+        
+        if segue.identifier == "showProfileEditViweController" {
+            var vc = segue.destinationViewController as! ProfileEditViewController
             vc.twAccount = self.twAccount
         }
     }
